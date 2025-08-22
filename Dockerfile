@@ -1,12 +1,3 @@
-# Dockerfile
-FROM node:18-alpine
+FROM tomcat:9.0
 
-WORKDIR /app
-
-COPY package*.json ./
-RUN npm install
-
-COPY . .
-
-EXPOSE 3000
-CMD ["npm", "start"]
+COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
