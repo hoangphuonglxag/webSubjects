@@ -10,7 +10,8 @@ import java.io.IOException;
 @WebServlet("/survey")
 public class SurveyServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-
+    request.setCharacterEncoding("UTF-8");
+    response.setContentType("text/html;charset=UTF-8");
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("firstName", request.getParameter("firstName"));
@@ -30,6 +31,6 @@ public class SurveyServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
-        response.getWriter().println("GET method is not supported.");
+        response.getWriter().println(":>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.");
     }
 }
