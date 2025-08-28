@@ -2,84 +2,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kết quả khảo sát</title>
+    <title>Survey Result</title>
     <style>
-        /* Toàn trang */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #c8d6e5, #f1f3f6);
-            padding: 40px 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #fff5f5;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            height: 100vh;
             margin: 0;
+            font-size: 85%;
         }
 
-        /* Hộp kết quả */
         .result-box {
             background-color: #ffffff;
-            padding: 30px 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(44, 62, 80, 0.15);
+            padding: 25px 35px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(220, 20, 60, 0.3); /* crimson */
             max-width: 420px;
             width: 100%;
-            text-align: center;
+            text-align: left;
             animation: fadeIn 0.8s ease forwards;
         }
 
-        /* Tiêu đề */
         h2 {
-            color: #2c3e50;
-            font-weight: 700;
-            font-size: 1.8rem;
-            margin-bottom: 1em;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        h2::after {
-            content: "✅";
-            position: absolute;
-            right: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.8rem;
+            font-size: 160%;
+            color: #b22222; /* firebrick */
+            margin-bottom: 0.8em;
+            text-align: center;
+            border-bottom: 2px solid #a52a2a; /* brown */
+            padding-bottom: 0.2em;
         }
 
-        /* Nội dung */
         p {
-            font-size: 1.1rem;
-            color: #34495e;
+            font-size: 1rem;
+            color: #333;
             margin: 0.6em 0;
         }
+
         p strong {
-            color: #2c3e50;
+            color: #800000; /* maroon */
         }
 
-        /* Hiệu ứng mờ dần */
+        .thank-you {
+            margin-top: 20px;
+            font-style: italic;
+            color: #006400; /* dark green for positive feedback */
+            font-weight: bold;
+            text-align: center;
+        }
+
         @keyframes fadeIn {
             from {opacity: 0; transform: translateY(20px);}
             to {opacity: 1; transform: translateY(0);}
-        }
-
-        /* Responsive nhẹ */
-        @media (max-width: 480px) {
-            .result-box {
-                padding: 20px 25px;
-            }
-            h2 {
-                font-size: 1.5rem;
-            }
-            p {
-                font-size: 1rem;
-            }
         }
     </style>
 </head>
 <body>
     <div class="result-box">
-        <h2>Kết quả khảo sát</h2>
+        <h2>Survey result</h2>
+        <p><strong>Full name:</strong> ${lastName} ${firstName}</p>
         <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Date of birth:</strong> ${dob}</p>
+        <p><strong>Heard about us From:</strong> ${heardFrom}</p>
+        <p><strong>Wants updates:</strong> ${wantsUpdates != null ? "Yes" : "No"}</p>
+        <p><strong>Preferred contact method:</strong> ${contactVia}</p>
+        <p><strong>Email consent:</strong> ${agreeEmailContact != null ? "Yes" : "No"}</p>
+
+        <p class="thank-you">Thank you for participating in our survey!</p>
     </div>
 </body>
 </html>

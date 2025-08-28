@@ -1,4 +1,6 @@
 package com.example;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -10,13 +12,20 @@ public class SurveyServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws IOException {
-        String email = request.getParameter("email");
-        response.setContentType("text/html;charset=UTF-8");
-        response.getWriter().println("<h2>Survey received</h2>");
-        response.getWriter().println("<p>Email: " + email + "</p>");
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("firstName", request.getParameter("firstName"));
+        request.setAttribute("lastName", request.getParameter("lastName"));
+        request.setAttribute("email", request.getParameter("email"));
+        request.setAttribute("dob", request.getParameter("dob"));
+        request.setAttribute("heardFrom", request.getParameter("heardFrom"));
+        request.setAttribute("wantsUpdates", request.getParameter("wantsUpdates"));
+        request.setAttribute("contactVia", request.getParameter("contactVia"));
+        request.setAttribute("agreeEmailContact", request.getParameter("agreeEmailContact"));
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("survey.jsp");
+        dispatcher.forward(request, response);
     }
+
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
