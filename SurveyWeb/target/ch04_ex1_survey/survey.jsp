@@ -61,14 +61,14 @@
 </head>
 <body>
     <div class="result-box">
-        <h2>Survey Result</h2>
-        <p><strong>Full Name:</strong> ${lastName} ${firstName}</p>
+        <h2>Survey result</h2>
+        <p><strong>Full name:</strong> ${lastName} ${firstName}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Date of Birth:</strong> ${dob}</p>
-        <p><strong>Heard About Us From:</strong> ${heardFrom}</p>
-        <p><strong>Wants Updates:</strong> ${wantsUpdates != null ? "Yes" : "No"}</p>
-        <p><strong>Preferred Contact Method:</strong> ${contactVia}</p>
-        <p><strong>Email Consent:</strong> ${agreeEmailContact != null ? "Yes" : "No"}</p>
+        <p><strong>Date of birth:</strong> ${dob}</p>
+        <p><strong>Heard about us From:</strong> ${heardFrom}</p>
+        <p><strong>Wants updates:</strong> ${wantsUpdates != null ? "Yes" : "No"}</p>
+        <p><strong>Preferred contact method:</strong> ${contactVia}</p>
+        <p><strong>Email consent:</strong> ${agreeEmailContact != null ? "Yes" : "No"}</p>
 
         <p class="thank-you">Thank you for participating in our survey!</p>
     </div>
