@@ -5,7 +5,6 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
                              http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 
-    <!-- Filter để đặt encoding UTF-8 cho tất cả request và response -->
     <filter>
         <filter-name>EncodingFilter</filter-name>
         <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
@@ -24,12 +23,10 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-    <!-- Cấu hình thời gian timeout cho session (phút) -->
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
 
-    <!-- File trang chủ mặc định -->
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
         <welcome-file>index.html</welcome-file>

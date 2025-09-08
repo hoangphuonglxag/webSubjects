@@ -13,7 +13,7 @@ public class SurveyServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
-    response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
         request.setAttribute("firstName", request.getParameter("firstName"));
         request.setAttribute("lastName", request.getParameter("lastName"));
         request.setAttribute("email", request.getParameter("email"));

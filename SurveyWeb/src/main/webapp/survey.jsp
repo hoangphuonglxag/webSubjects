@@ -71,6 +71,21 @@
         <p><strong>Email consent:</strong> ${agreeEmailContact != null ? "Yes" : "No"}</p>
 
         <p class="thank-you">Thank you for participating in our survey!</p>
+        <div style="text-align: center; margin-top: 20px;">
+    <form action="index.html" method="get">
+        <button type="submit" style="
+            background-color: #b22222;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        ">
+            Return to Survey
+        </button>
+    </form>
+</div>
     </div>
 </body>
 </html>
