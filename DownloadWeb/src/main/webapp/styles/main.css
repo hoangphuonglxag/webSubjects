@@ -1,0 +1,163 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fffafa; /* đỏ nhạt */
+  margin: 0;
+  padding: 30px;
+  color: #333;
+}
+
+h1 {
+  color: #dc3545; /* đỏ chính */
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.welcome-message {
+  background-color: #ffe3e3; /* đỏ nhạt */
+  color: #dc3545;
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  text-align: center;
+  box-shadow: 0 1px 6px rgba(220, 53, 69, 0.2);
+}
+
+.album-list {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+}
+
+.album-list p {
+  font-size: 1.1rem;
+  line-height: 2.2rem;
+}
+
+.album-list a {
+  display: block;
+  color: #dc3545;
+  font-weight: 600;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.album-list a:last-child {
+  border-bottom: none;
+}
+
+.album-list a:hover {
+  background-color: #dc3545;
+  color: white;
+  padding-left: 10px;
+}
+
+.message-box {
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #ffe3e3;
+  padding: 20px 25px;
+  border-radius: 10px;
+  color: #dc3545;
+  font-size: 1.1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.15);
+}
+
+.links {
+  max-width: 400px;
+  margin: 30px auto 0 auto;
+  text-align: center;
+}
+
+.links p {
+  margin: 15px 0;
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  background-color: #dc3545;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-link:hover {
+  background-color: #b02a37;
+}
+
+.cookie-table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.cookie-table th, .cookie-table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+  word-break: break-word;
+}
+
+.cookie-table th {
+  background-color: #dc3545;
+  color: white;
+}
+
+.cookie-table tr:hover {
+  background-color: #fef1f1;
+}
+.cookie-table caption {
+  caption-side: top;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #dc3545;
+}
+
+.album-table {
+  width: 80%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(215, 38, 56, 0.1);
+}
+
+.album-table th,
+.album-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.album-table th {
+  background-color: #d72638;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.album-table tr:hover {
+  background-color: #fff5f5;
+}
+
+.album-table td a.btn-link {
+  font-size: 14px;
+  padding: 8px 14px;
+  display: inline-block;
+}
