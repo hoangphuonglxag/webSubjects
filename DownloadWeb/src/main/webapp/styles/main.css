@@ -57,7 +57,7 @@ h1 {
 .album-list a:hover {
   background-color: #dc3545;
   color: white;
-  padding-left: 10px;
+  padding-center: 10px;
 }
 
 .message-box {
@@ -108,7 +108,7 @@ h1 {
 .cookie-table th, .cookie-table td {
   border: 1px solid #ddd;
   padding: 12px 15px;
-  text-align: left;
+  text-align: center;
   word-break: break-word;
 }
 
@@ -141,7 +141,7 @@ h1 {
 .album-table th,
 .album-table td {
   padding: 16px 20px;
-  text-align: left;
+  text-align: center;
   border-bottom: 1px solid #eee;
 }
 
