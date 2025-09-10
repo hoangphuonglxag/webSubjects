@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Murach's Java Servlets and JSP</title>
+    <title>23133059 - Hoang Phuong</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/main.css" type="text/css"/>
 </head>
 <body>

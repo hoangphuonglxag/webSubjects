@@ -4,6 +4,7 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.util.Calendar;
+import java.util.List;
 
 import murach.business.User;
 import murach.data.UserDB;
@@ -28,22 +29,32 @@ public class EmailListServlet extends HttpServlet {
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
             String email = request.getParameter("email");
-            
-            User user = new User(firstName, lastName, email);
 
+            User user = new User(email, firstName, lastName);
             String message;
+
             if (firstName == null || lastName == null || email == null ||
                 firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
                 message = "Please fill out all three text boxes.";
                 url = "/index.jsp";
-            } 
-            else {
+            } else {
                 message = "";
                 url = "/thanks.jsp";
-                UserDB.insert(user);
+
+                ServletContext sc = getServletContext();
+                String path = sc.getRealPath(getServletConfig().getInitParameter("relativePathToFile"));
+
+                // Ghi user vào file
+                UserDB.insert(user, path);
+
+                // Đọc lại danh sách từ file
+                List<User> users = UserDB.getAll(path);
+
+                // Lưu user và danh sách vào request
+                request.setAttribute("user", user);
+                request.setAttribute("users", users);
             }
-            request.setAttribute("user", user);
-            request.setAttribute("message", message);
+
             int year = Calendar.getInstance().get(Calendar.YEAR);
             request.setAttribute("currentYear", year);
         }

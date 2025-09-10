@@ -1,9 +1,9 @@
-<%@page contentType="text/html" pageEncoding="utf-8"%>
+<%@ page contentType="text/html" pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Murach's Java Servlets and JSP</title>
+    <title>Murach's Java Servlets and JSP - Error</title>
     <link rel="stylesheet" href="styles/main.css" type="text/css"/>
 </head>
 <body>
@@ -15,6 +15,11 @@
 <h2>Details</h2>
 <p>Type: ${pageContext.exception["class"]}</p>
 <p>Message: ${pageContext.exception.message}</p>
+
+<!-- Nút quay lại trang chính -->
+<form action="index.jsp" method="get">
+    <input type="submit" value="Back" />
+</form>
 
 </body>
 </html>
