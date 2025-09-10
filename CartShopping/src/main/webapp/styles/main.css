@@ -1,0 +1,92 @@
+/* Toàn trang */
+body {
+    background-color: #111; /* đen */
+    color: #eee; /* chữ trắng sáng */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #e60000; /* đỏ tươi */
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px #ff3333;
+}
+
+/* Table */
+table {
+    width: 80%;
+    margin: 0 auto 30px;
+    border-collapse: collapse;
+    background-color: #222;
+    box-shadow: 0 0 8px #e60000;
+}
+
+th, td {
+    border: 1px solid #e60000;
+    padding: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+th {
+    background-color: #e60000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+tr:hover {
+    background-color: #ff4d4d;
+    color: black;
+    cursor: pointer;
+}
+
+/* Form input và button */
+input[type="text"], input[type="number"] {
+    width: 60px;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #e60000;
+    text-align: center;
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    background-color: #e60000;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #b30000;
+}
+
+/* Liên kết Remove Item */
+a {
+    color: #ff6666;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+/* Paragraph nhỏ */
+p {
+    width: 80%;
+    margin: 0 auto 20px auto;
+    font-size: 0.9em;
+    color: #ccc;
+    text-align: center;
+}
