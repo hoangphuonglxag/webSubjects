@@ -1,8 +1,9 @@
-	package murach.email;
+package murach.email;
 
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
+import java.util.Calendar;
 
 import murach.business.User;
 import murach.data.UserDB;
@@ -43,6 +44,8 @@ public class EmailListServlet extends HttpServlet {
             }
             request.setAttribute("user", user);
             request.setAttribute("message", message);
+            int year = Calendar.getInstance().get(Calendar.YEAR);
+            request.setAttribute("currentYear", year);
         }
         getServletContext()
                 .getRequestDispatcher(url)
