@@ -62,13 +62,38 @@
 <body>
     <div class="result-box">
         <h2>Survey result</h2>
-        <p><strong>Full name:</strong> ${lastName} ${firstName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Date of birth:</strong> ${dob}</p>
-        <p><strong>Heard about us From:</strong> ${heardFrom}</p>
-        <p><strong>Wants updates:</strong> ${wantsUpdates != null ? "Yes" : "No"}</p>
-        <p><strong>Preferred contact method:</strong> ${contactVia}</p>
-        <p><strong>Email consent:</strong> ${agreeEmailContact != null ? "Yes" : "No"}</p>
+
+        <p><strong>Full name:</strong> ${user.lastName} ${user.firstName}</p>
+        <p><strong>Email:</strong> ${user.email}</p>
+        <p><strong>Date of birth:</strong> ${user.dob}</p>
+        <p><strong>Heard about us From:</strong> ${user.heardFrom}</p>
+        
+        <p><strong>Wants updates:</strong> 
+            <c:choose>
+                <c:when test="${not empty user.wantsUpdates}">
+                    Yes
+                </c:when>
+                <c:otherwise>
+                    No
+                </c:otherwise>
+            </c:choose>
+        </p>
+
+        <!-- Chỉ hiển thị Contact Via nếu người dùng muốn nhận cập nhật -->
+        <c:if test="${not empty user.wantsUpdates}">
+            <p><strong>Preferred contact method:</strong> ${user.contactVia}</p>
+        </c:if>
+
+        <p><strong>Email consent:</strong> 
+            <c:choose>
+                <c:when test="${not empty user.agreeEmailContact}">
+                    Yes
+                </c:when>
+                <c:otherwise>
+                    No
+                </c:otherwise>
+            </c:choose>
+        </p>
 
         <p class="thank-you">Thank you for participating in our survey!</p>
         <div style="text-align: center; margin-top: 20px;">
