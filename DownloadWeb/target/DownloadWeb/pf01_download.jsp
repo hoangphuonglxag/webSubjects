@@ -9,7 +9,7 @@
 
 <h1>Downloads</h1>
 
-<h2>Joe Rut - Genuine Wood Grained Finish</h2>
+<h2>Paddlefoot - The First CD</h2>
 
 <table>
 <tr>
@@ -17,12 +17,12 @@
     <th>Audio Format</th>
 </tr>
 <tr>
-    <td>Filter</td>
-    <td><a href="/musicStore/sound/jr01/filter.mp3">MP3</a></td>
+    <td>Song 1 Title</td>
+    <td><a href="/musicStore/sound/pf01/song1.mp3">MP3</a></td>
 </tr>
 <tr>
-    <td>So Long Lazy Ray</td>
-    <td><a href="/musicStore/sound/jr01/so_long.mp3">MP3</a></td>
+    <td>Song 2 Title</td>
+    <td><a href="/musicStore/sound/pf01/song2.mp3">MP3</a></td>
 </tr>
 </table>
 

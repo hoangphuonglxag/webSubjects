@@ -1,4 +1,6 @@
 com\example\UserIO.class
+com\example\ProductIO.class
 com\example\CookieUtil.class
 com\example\User.class
 com\example\DownloadServlet.class
+com\example\Product.class
