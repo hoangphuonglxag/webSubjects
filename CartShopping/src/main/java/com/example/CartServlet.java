@@ -1,9 +1,5 @@
-package murach.cart;
+package com.example;
 
-import murach.data.ProductIO;
-import murach.business.LineItem;
-import murach.business.Cart;
-import murach.business.Product;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -19,13 +15,11 @@ public class CartServlet extends HttpServlet {
         String url = "/index.jsp";
         ServletContext sc = getServletContext();
         
-        // get current action
         String action = request.getParameter("action");
         if (action == null) {
             action = "cart";  // default action
         }
 
-        // perform action and set URL to appropriate page
         if (action.equals("shop")) {
             url = "/index.jsp";    // the "index" page
         } 

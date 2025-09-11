@@ -1,4 +1,4 @@
-package murach.business;
+package com.example;
 
 import java.io.Serializable;
 import java.text.NumberFormat;
@@ -26,7 +26,6 @@ public class Cart implements Serializable {
         int quantity = item.getQuantity();
         for (LineItem cartItem : items) {
             if (cartItem.getProduct().getCode().equals(code)) {
-                // Cộng dồn số lượng nếu sản phẩm đã có trong giỏ
                 cartItem.setQuantity(cartItem.getQuantity() + quantity);
                 return;
             }
@@ -55,7 +54,7 @@ public class Cart implements Serializable {
         return total;
     }
 
-    // Phương thức trả về tổng tiền theo định dạng tiền tệ (ví dụ $xxx.xx)
+    // Phương thức trả về tổng tiền theo định dạng tiền
     public String getTotalCurrencyFormat() {
         NumberFormat currency = NumberFormat.getCurrencyInstance(Locale.US);
         return currency.format(getTotal());

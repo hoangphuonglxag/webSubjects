@@ -1,4 +1,4 @@
-package murach.business;
+package com.example;
 
 import java.io.Serializable;
 import java.text.NumberFormat;
@@ -7,9 +7,6 @@ public class LineItem implements Serializable {
 
     private Product product;
     private int quantity;
-
-    public LineItem() {
-    }
 
     public void setProduct(Product p) {
         product = p;

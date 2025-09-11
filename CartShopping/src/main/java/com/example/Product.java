@@ -1,4 +1,4 @@
-package murach.business;
+package com.example;
 
 import java.io.Serializable;
 import java.text.NumberFormat;
