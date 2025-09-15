@@ -17,7 +17,7 @@ public class CartServlet extends HttpServlet {
         
         String action = request.getParameter("action");
         if (action == null) {
-            action = "cart";  // default action
+            action = "cart";
         }
 
         if (action.equals("shop")) {
