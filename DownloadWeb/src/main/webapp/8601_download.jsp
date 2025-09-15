@@ -9,7 +9,7 @@
 
 <h1>Downloads</h1>
 
-<h2>86 (the band) - True Life Songs and Pictures</h2>
+<h2>Yung Kai - Two song hay nhat Hongkong</h2>
 
 <table>
 <tr>
@@ -17,12 +17,12 @@
     <th>Audio Format</th>
 </tr>
 <tr>
-    <td>You Are a Star</td>
-    <td><a href="/musicStore/sound/8601/star.mp3">MP3</a></td>
+    <td>Blue Kai</td>
+    <td><a href="https://www.youtube.com/watch?v=IpFX2vq8HKw&list=PLK4TFcjBUrtreUVu-4eaBqheM4XBMknv0">YOUTUBE</a></td>
 </tr>
 <tr>
-    <td>Don't Make No Difference</td>
-    <td><a href="/musicStore/sound/8601/no_difference.mp3">MP3</a></td>
+    <td>My Light</td>
+    <td><a href="https://www.youtube.com/watch?v=OVAHWXLfS_Q">YOUTUBE</a></td>
 </tr>
 </table>
 

@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="styles/main.css" type="text/css"/>
 </head>
 <body>
-
+<c:if test="${cookie.emailCookie.value != null}">
+    <p>User Email: <c:out value="${cookie.emailCookie.value}"/></p>
+</c:if>
 <h1>List of albums</h1>
 
 <c:if test="${cookie.firstNameCookie.value != null}">
@@ -17,7 +19,7 @@
 <table class="album-table">
     <thead>
         <tr>
-            <th>#</th>
+            <th>Number</th>
             <th>Album Title</th>
             <th>Action</th>
         </tr>
