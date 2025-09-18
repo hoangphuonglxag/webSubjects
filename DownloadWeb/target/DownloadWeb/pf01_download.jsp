@@ -18,11 +18,17 @@
 </tr>
 <tr>
     <td>Song 1 Title</td>
-    <td><a href="/musicStore/sound/pf01/song1.mp3">MP3</a></td>
+    <td>
+        <a href="/musicStore/sound/pf01/song1.mp3" target="_blank">MP3</a> |
+        <a href="/musicStore/sound/pf01/song1.mp3" download>Download here</a>
+    </td>
 </tr>
 <tr>
     <td>Song 2 Title</td>
-    <td><a href="/musicStore/sound/pf01/song2.mp3">MP3</a></td>
+    <td>
+        <a href="/musicStore/sound/pf01/song2.mp3" target="_blank">MP3</a> |
+        <a href="/musicStore/sound/pf01/song2.mp3" download>Download here</a>
+    </td>
 </tr>
 </table>
 

@@ -9,21 +9,27 @@
 
 <h1>Downloads</h1>
 
-<h2>Yung Kai - Two song hay nhat Hongkong</h2>
+<h2>Yung Kai - Two songs hay nhat Hong Kong</h2>
 
 <table>
-<tr>
-    <th>Song title</th>
-    <th>Audio Format</th>
-</tr>
-<tr>
-    <td>Blue Kai</td>
-    <td><a href="https://www.youtube.com/watch?v=IpFX2vq8HKw&list=PLK4TFcjBUrtreUVu-4eaBqheM4XBMknv0">YOUTUBE</a></td>
-</tr>
-<tr>
-    <td>My Light</td>
-    <td><a href="https://www.youtube.com/watch?v=OVAHWXLfS_Q">YOUTUBE</a></td>
-</tr>
+    <tr>
+        <th>Song title</th>
+        <th>Audio Format</th>
+    </tr>
+    <tr>
+        <td>Blue Kai</td>
+        <td>
+            <a href="https://www.youtube.com/watch?v=IpFX2vq8HKw&list=PLK4TFcjBUrtreUVu-4eaBqheM4XBMknv0" target="_blank">YOUTUBE</a> |
+            <a href="https://y2mate.is" target="_blank">Download here</a>
+        </td>
+    </tr>
+    <tr>
+        <td>My Light</td>
+        <td>
+            <a href="https://www.youtube.com/watch?v=OVAHWXLfS_Q" target="_blank">YOUTUBE</a> |
+            <a href="https://y2mate.is" target="_blank">Download here</a>
+        </td>
+    </tr>
 </table>
 
 <div class="links">

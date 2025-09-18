@@ -18,11 +18,17 @@
 </tr>
 <tr>
     <td>Neon Lights</td>
-    <td><a href="/musicStore/sound/pf02/neon.mp3">MP3</a></td>
+    <td>
+        <a href="/musicStore/sound/pf02/neon.mp3" target="_blank">MP3</a> |
+        <a href="/musicStore/sound/pf02/neon.mp3" download>Download here</a>
+    </td>
 </tr>
 <tr>
     <td>Tank Hill</td>
-    <td><a href="/musicStore/sound/pf02/tank.mp3">MP3</a></td>
+    <td>
+        <a href="/musicStore/sound/pf02/tank.mp3" target="_blank">MP3</a> |
+        <a href="/musicStore/sound/pf02/tank.mp3" download>Download here</a>
+    </td>
 </tr>
 </table>
 

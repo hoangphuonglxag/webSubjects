@@ -10,7 +10,7 @@
 <h1>Download registration</h1>
 
 <p>To register for our downloads, enter your name and email
-   address below. Then, click on the Submit button.</p>
+   address below. Then, click on the Register button.</p>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <form action="download" method="post">

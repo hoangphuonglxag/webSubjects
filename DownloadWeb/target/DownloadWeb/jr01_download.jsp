@@ -18,11 +18,17 @@
 </tr>
 <tr>
     <td>Filter</td>
-    <td><a href="/musicStore/sound/jr01/filter.mp3">MP3</a></td>
+    <td>
+        <a href="/musicStore/sound/jr01/filter.mp3" target="_blank">MP3</a> |
+        <a href="/musicStore/sound/jr01/filter.mp3" download>Download here</a>
+    </td>
 </tr>
 <tr>
     <td>So Long Lazy Ray</td>
-    <td><a href="/musicStore/sound/jr01/so_long.mp3">MP3</a></td>
+    <td>
+        <a href="/musicStore/sound/jr01/so_long.mp3" target="_blank">MP3</a> |
+        <a href="/musicStore/sound/jr01/so_long.mp3" download>Download here</a>
+    </td>
 </tr>
 </table>
 
