@@ -88,9 +88,27 @@ public class PortfolioService {
         portfolio.setDescription("Website portfolio cá nhân với thiết kế hiện đại, responsive và tính năng xác thực. Sử dụng Java Servlet, JSP và MySQL.");
         portfolio.setTags(Arrays.asList("Java", "JSP", "Servlet", "MySQL", "Responsive"));
         
+        Project dataAnalysisIBM = new Project();
+        dataAnalysisIBM.setTitle("Phân tích dữ liệu phim IBM (1998-2018)");
+        dataAnalysisIBM.setDescription("Dự án phân tích dữ liệu phim của IBM từ 1998 đến 2018 sử dụng Python. Xử lý và visualize dữ liệu để tìm ra xu hướng phát triển của ngành công nghiệp phim ảnh qua 20 năm.");
+        dataAnalysisIBM.setTags(Arrays.asList("Python", "Pandas", "NumPy", "Tkinter", "Data Analysis", "Visualization"));
+        
+        Project heartDiseaseAnalysis = new Project();
+        heartDiseaseAnalysis.setTitle("Phân tích dữ liệu bệnh tim mạch");
+        heartDiseaseAnalysis.setDescription("Nghiên cứu phân tích dữ liệu bệnh tim mạch sử dụng ngôn ngữ R. Áp dụng các mô hình machine learning như cây quyết định và hồi quy để dự đoán nguy cơ bệnh tim và đưa ra kết luận y học.");
+        heartDiseaseAnalysis.setTags(Arrays.asList("R", "Machine Learning", "Decision Tree", "Regression", "Medical Analysis", "Statistical Computing"));
+        
+        Project dormManagement = new Project();
+        dormManagement.setTitle("Phần mềm quản lý ký túc xá");
+        dormManagement.setDescription("Ứng dụng desktop quản lý ký túc xá toàn diện với giao diện WinForms. Quản lý sinh viên, phòng ở, thanh toán và báo cáo thống kê. Sử dụng SQL Server để lưu trữ dữ liệu.");
+        dormManagement.setTags(Arrays.asList("C#", "WinForms", "SQL Server", "Desktop Application", "Database Management"));
+
         projects.add(ecommerce);
         projects.add(taskManagement);
         projects.add(portfolio);
+        projects.add(dataAnalysisIBM);
+        projects.add(heartDiseaseAnalysis);
+        projects.add(dormManagement);
         
         return projects;
     }
