@@ -1,7 +1,9 @@
 # Portfolio Web Application
 
 ## Mô tả
-Website portfolio cá nhân của **Đinh Hoàng Phương** với cấu trúc MVC và tính năng xác thực để nộp bài tập.
+Website portfolio cá nhân của **Đinh Hoàng Phương** - sinh viên Kỹ thuật Dữ liệu với chuyên môn Web Development và Big Data Analytics. 
+
+Showcase các kỹ năng: Java, JSP/Servlet, Spring Boot, Big Data (Hadoop, Spark, Hive), Database Management, và DevOps.
 
 ## Cấu trúc thư mục
 
@@ -155,6 +157,50 @@ open src/main/webapp/index.html
 - Sidebar width: `300px` (có thể thay đổi trong CSS)
 - Max content width: Responsive với container
 - Grid columns: Auto-fit từ `320px`
+
+## 🚀 Deploy lên Render
+
+### Bước 1: Chuẩn bị
+```bash
+# Build project
+mvn clean package
+
+# Commit và push lên GitHub
+git add .
+git commit -m "Ready for deploy"
+git push origin PortfolioWeb
+```
+
+### Bước 2: Deploy trên Render
+1. Truy cập [render.com](https://render.com)
+2. Tạo **Web Service** mới
+3. Connect GitHub repository: `hoangphuonglxag/webSubjects`
+4. Chọn branch: `PortfolioWeb`
+5. Cấu hình:
+   - **Build Command**: `mvn clean package`
+   - **Start Command**: Để trống (sử dụng Dockerfile)
+   - **Environment**: Docker
+   - **Port**: 8080
+
+### Bước 3: Environment Variables
+Render sẽ tự động:
+- Detect Dockerfile
+- Build Docker image
+- Deploy trên port 8080
+
+### Bước 4: Custom Domain (Optional)
+- Render sẽ cung cấp URL: `https://your-app-name.onrender.com`
+- Có thể config custom domain sau
+
+## 🔧 Troubleshooting Deploy
+
+### CSS không load
+- Đảm bảo `${pageContext.request.contextPath}` được sử dụng đúng
+- Kiểm tra static resources mapping trong servlet
+
+### 404 Error
+- Servlet pattern đã được config: `"/"` và `"/portfolio"`
+- Default ROOT.war deployment
 
 ## License
 MIT License - Free for personal and commercial use.

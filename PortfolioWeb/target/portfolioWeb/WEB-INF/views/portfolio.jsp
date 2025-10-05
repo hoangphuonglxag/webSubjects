@@ -1,33 +1,26 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio - ${user.name}</title>
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="/css/styles.css">
-
-  <!-- Meta tags for SEO -->
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
   <meta name="description" content="Portfolio của ${user.name} - ${user.title}">
   <meta name="keywords" content="${user.name}, ${user.title}, Portfolio, Java, Web Development">
   <meta name="author" content="${user.name}">
-  
 </head>
 <body>
-  <!-- Background -->
   <div class="main-bg"></div>
   <div class="bg-pattern"></div>
 
   <div class="container">
-    <!-- Sidebar -->
     <aside class="sidebar">
       <div class="profile-section">
         <div class="profile-avatar">
-          ${user.avatar}
+          <img src="${pageContext.request.contextPath}/images/twentyYearsAGO.png" alt="${user.name}">
         </div>
         <div class="profile-name">${user.name}</div>
         <div class="profile-title">${user.title}</div>
@@ -53,18 +46,10 @@
 
       <div class="contact-info">
         <h4>Thông tin liên hệ</h4>
-        <div class="contact-item">
-          📧 ${user.email}
-        </div>
-        <div class="contact-item">
-          📱 ${user.phone}
-        </div>
-        <div class="contact-item">
-          📍 ${user.location}
-        </div>
-        <div class="contact-item">
-          🌐 ${user.website}
-        </div>
+        <div class="contact-item">📧 ${user.email}</div>
+        <div class="contact-item">📱 ${user.phone}</div>
+        <div class="contact-item">📍 ${user.location}</div>
+        <div class="contact-item">🌐 ${user.website}</div>
       </div>
 
       <nav class="nav-menu">
@@ -91,9 +76,7 @@
       </nav>
     </aside>
 
-    <!-- Main content -->
     <main class="main-content">
-      <!-- About Me Section -->
       <section class="content-section active" id="about">
         <div class="section-header">
           <div class="icon">👤</div>
@@ -105,17 +88,16 @@
             <p>${user.description}</p>
           </div>
           <div class="card">
-            <h3>💼 Kinh nghiệm</h3>
-            <p>Tham gia phát triển các dự án web application, API development, database design và system architecture. Có khả năng làm việc nhóm và tự học hỏi công nghệ mới.</p>
+            <h3>💼 Kinh nghiệm công nghệ</h3>
+            <p>Phát triển ứng dụng web với Java ecosystem (Spring Boot, JSP/Servlet), quản lý cơ sở dữ liệu (PostgreSQL, MySQL, SQL Server), và xử lý big data với Apache Hadoop, Spark, Hive. Thành thạo containerization với Docker, CI/CD, và version control với Git/GitHub.</p>
           </div>
           <div class="card">
-            <h3>🎓 Học vấn</h3>
-            <p>Sinh viên ngành Công nghệ Thông tin với chuyên sâu về phát triển phần mềm. Liên tục cập nhật và học hỏi các công nghệ mới trong ngành.</p>
+            <h3>🎓 Học vấn & chuyên môn</h3>
+            <p>Sinh viên năm cuối ngành Kỹ thuật Dữ liệu với focus vào big data analytics và web development. Học tập và thực hành các công nghệ: Hadoop ecosystem, Apache Spark, data warehousing, cùng với modern web technologies và cloud deployment.</p>
           </div>
         </div>
       </section>
 
-      <!-- Skills Section -->
       <section class="content-section" id="skills">
         <div class="section-header">
           <div class="icon">⚡</div>
@@ -132,7 +114,6 @@
         </div>
       </section>
 
-      <!-- Certificates Section -->
       <section class="content-section" id="certificates">
         <div class="section-header">
           <div class="icon">🏆</div>
@@ -150,13 +131,11 @@
         </div>
       </section>
 
-      <!-- Projects Section -->
       <section class="content-section" id="projects">
         <div class="section-header">
           <div class="icon">🚀</div>
           <h2>Dự án nổi bật</h2>
         </div>
-        
         <c:forEach var="project" items="${projects}">
           <div class="project-item">
             <div class="project-header">
@@ -174,103 +153,121 @@
         </c:forEach>
       </section>
 
-      <!-- Assignments Section -->
       <section class="content-section" id="assignments">
         <div class="section-header">
           <div class="icon">📝</div>
-          <h2>Quản lý Bài tập</h2>
+          <h2>Bài tập đã hoàn thành</h2>
         </div>
-
-        <!-- Authentication Status -->
-        <div class="auth-status ${isAuthenticated ? 'authenticated' : 'unauthenticated'}">
-          <c:choose>
-            <c:when test="${isAuthenticated}">
-              🔓 Đã xác thực - Có thể nộp bài tập
-            </c:when>
-            <c:otherwise>
-              🔒 Chưa xác thực - Cần nhập mật khẩu để nộp bài tập
-            </c:otherwise>
-          </c:choose>
-        </div>
-
-        <!-- Upload Section -->
-        <div class="assignment-upload ${isAuthenticated ? '' : 'disabled'}">
-          <div class="upload-icon">📤</div>
-          <h3>Nộp bài tập mới</h3>
-          <p><c:choose>
-            <c:when test="${isAuthenticated}">Chọn file để upload bài tập</c:when>
-            <c:otherwise>Cần xác thực mật khẩu để có thể upload bài tập</c:otherwise>
-          </c:choose></p>
-          
-          <form id="uploadForm" enctype="multipart/form-data" style="display: inline;">
-            <input type="file" class="file-input" id="assignmentFile" name="file" multiple accept=".pdf,.doc,.docx,.zip,.rar">
-            <input type="hidden" id="assignmentName" name="assignmentName" value="">
-          </form>
-          
-          <button class="upload-button" onclick="handleUpload()">
-            <c:choose>
-              <c:when test="${isAuthenticated}">📤 Nộp bài tập</c:when>
-              <c:otherwise>🔒 Nộp bài tập</c:otherwise>
-            </c:choose>
-          </button>
-        </div>
-
-        <!-- Assignment List -->
+        
         <div class="assignment-list">
           <div class="assignment-list-header">
-            📚 Danh sách bài tập đã nộp
+            📚 Danh sách bài tập Web Development
           </div>
-          
-          <c:forEach var="assignment" items="${assignments}">
-            <div class="assignment-item">
-              <div class="assignment-info">
-                <div class="assignment-name">${assignment.name}</div>
-                <div class="assignment-date">
-                  <c:choose>
-                    <c:when test="${assignment.submitDate != null}">
-                      <fmt:formatDate value="${assignment.submitDate}" pattern="dd/MM/yyyy" var="submitDateStr"/>
-                      Nộp ngày: ${submitDateStr}
-                    </c:when>
-                    <c:otherwise>
-                      <fmt:formatDate value="${assignment.dueDate}" pattern="dd/MM/yyyy" var="dueDateStr"/>
-                      Hạn nộp: ${dueDateStr}
-                    </c:otherwise>
-                  </c:choose>
-                </div>
+
+          <div class="assignment-item">
+            <div class="assignment-info">
+              <div class="assignment-name">🛒 Cart Shopping - Giỏ hàng trực tuyến</div>
+              <div class="assignment-description">
+                Ứng dụng web giỏ hàng với JSP, Servlet và cơ sở dữ liệu. 
+                Tính năng: thêm sản phẩm, xem giỏ hàng, checkout.
               </div>
-              <div class="assignment-status status-${assignment.status}">
-                ${assignment.statusIcon} ${assignment.statusText}
+              <div class="assignment-tech">
+                <span class="tech-tag">JSP</span>
+                <span class="tech-tag">Servlet</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">HTML/CSS</span>
               </div>
             </div>
-          </c:forEach>
+            <div class="assignment-actions">
+              <a href="https://github.com/hoangphuonglxag/webSubjects/tree/CartShopping" class="btn-link" target="_blank">🔗 Xem Code</a>
+              <a href="https://two3133059-cartshopping.onrender.com" class="btn-demo" target="_blank">🚀 Demo</a>
+            </div>
+          </div>
+
+          <div class="assignment-item">
+            <div class="assignment-info">
+              <div class="assignment-name">🔗 Connect Web - Kết nối cơ sở dữ liệu</div>
+              <div class="assignment-description">
+                Ứng dụng demo kết nối và thao tác với cơ sở dữ liệu MySQL.
+                Thực hành CRUD operations cơ bản.
+              </div>
+              <div class="assignment-tech">
+                <span class="tech-tag">JDBC</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Servlet</span>
+                <span class="tech-tag">JSP</span>
+              </div>
+            </div>
+            <div class="assignment-actions">
+              <a href="https://github.com/hoangphuonglxag/webSubjects/tree/ConnectWeb" class="btn-link" target="_blank">🔗 Xem Code</a>
+              <a href="http://localhost:8080/ConnectWeb" class="btn-demo" target="_blank">🚀 Demo</a>
+            </div>
+          </div>
+
+          <div class="assignment-item">
+            <div class="assignment-info">
+              <div class="assignment-name">📥 Download Web - Quản lý tải xuống</div>
+              <div class="assignment-description">
+                Hệ thống quản lý file download với cookies và session management.
+                Tính năng: upload, download, quản lý cookies.
+              </div>
+              <div class="assignment-tech">
+                <span class="tech-tag">File Upload</span>
+                <span class="tech-tag">Cookies</span>
+                <span class="tech-tag">Session</span>
+                <span class="tech-tag">JSP</span>
+              </div>
+            </div>
+            <div class="assignment-actions">
+              <a href="https://github.com/hoangphuonglxag/webSubjects/tree/DownloadWeb" class="btn-link" target="_blank">🔗 Xem Code</a>
+              <a href="https://hoangphuong-ex9-1.onrender.com" class="btn-demo" target="_blank">🚀 Demo</a>
+            </div>
+          </div>
+
+          <div class="assignment-item">
+            <div class="assignment-info">
+              <div class="assignment-name">📧 Email List MVC - Quản lý danh sách email</div>
+              <div class="assignment-description">
+                Ứng dụng MVC pattern để quản lý danh sách email subscribers.
+                Thực hành kiến trúc Model-View-Controller.
+              </div>
+              <div class="assignment-tech">
+                <span class="tech-tag">MVC Pattern</span>
+                <span class="tech-tag">Servlet</span>
+                <span class="tech-tag">JSP</span>
+                <span class="tech-tag">JSTL</span>
+              </div>
+            </div>
+            <div class="assignment-actions">
+              <a href="https://github.com/hoangphuonglxag/webSubjects/tree/EmailListMVC" class="btn-link" target="_blank">🔗 Xem Code</a>
+              <a href="https://websubjects-1.onrender.com" class="btn-demo" target="_blank">🚀 Demo</a>
+            </div>
+          </div>
+
+          <div class="assignment-item">
+            <div class="assignment-info">
+              <div class="assignment-name">📊 Survey Web - Khảo sát trực tuyến</div>
+              <div class="assignment-description">
+                Hệ thống tạo và quản lý khảo sát trực tuyến với báo cáo thống kê.
+                Form validation và data processing.
+              </div>
+              <div class="assignment-tech">
+                <span class="tech-tag">Form Processing</span>
+                <span class="tech-tag">Validation</span>
+                <span class="tech-tag">Statistics</span>
+                <span class="tech-tag">JSP</span>
+              </div>
+            </div>
+            <div class="assignment-actions">
+              <a href="https://github.com/hoangphuonglxag/webSubjects/tree/SurveyWeb" class="btn-link" target="_blank">🔗 Xem Code</a>
+              <a href="https://websubjects2.onrender.com" class="btn-demo" target="_blank">🚀 Demo</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
   </div>
 
-  <!-- Password Modal -->
-  <div id="passwordModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="icon">🔐</div>
-        <h3>Xác thực</h3>
-      </div>
-      <p>Vui lòng nhập mật khẩu để nộp bài tập:</p>
-      <input type="password" id="passwordInput" class="password-input" placeholder="Nhập mật khẩu...">
-      <div class="error-message"></div>
-      <div class="modal-buttons">
-        <button id="submitPassword" class="btn-submit">Xác nhận</button>
-        <button id="cancelPassword" class="btn-cancel">Hủy</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- JavaScript với JSP integration -->
-  <script>
-    // Global variables từ JSP
-    window.contextPath = '${pageContext.request.contextPath}';
-    window.isAuthenticated = ${isAuthenticated};
-  </script>
   <script src="${pageContext.request.contextPath}/js/portfolio.js"></script>
 </body>
 </html>

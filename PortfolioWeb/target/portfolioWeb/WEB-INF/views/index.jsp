@@ -154,8 +154,6 @@
         setTimeout(function() {
             window.location.href = './';
         }, redirectDelay);
-        
-        // Show dynamic message
         <c:if test="${not empty welcomeMessage}">
             console.log('<c:out value="${welcomeMessage}" escapeXml="false"/>');
         </c:if>

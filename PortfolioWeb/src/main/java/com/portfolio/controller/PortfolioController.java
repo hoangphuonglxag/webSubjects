@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Main Controller Servlet xử lý tất cả request của Portfolio
  */
-@WebServlet(name = "PortfolioController", urlPatterns = {"/", "/api/*"})
+@WebServlet(name = "PortfolioController", urlPatterns = {"/", "/portfolio", "/api/*"})
 @MultipartConfig(
     fileSizeThreshold = 1024 * 1024 * 1,    // 1 MB
     maxFileSize = 1024 * 1024 * 10,         // 10 MB

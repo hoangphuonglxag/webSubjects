@@ -16,18 +16,19 @@ public class User {
     private String description;
 
     // Constructor mặc định
+
     public User() {
         // Thông tin mặc định - có thể load từ database
         this.name = "Đinh Hoàng Phương";
-        this.title = "Backend Developer";
+        this.title = "Web Developer & Data Engineering Student";
         this.email = "phuongdinhhoang18@gmail.com";
-        this.phone = "+84 346 295 559";
+        this.phone = "+84 346 295 422";
         this.location = "Hồ Chí Minh, Việt Nam";
         this.website = "hoangphuonglxag.dev";
         this.facebookUrl = "https://www.facebook.com/hoang.phuong.081025";
         this.githubUrl = "https://github.com/hoangphuonglxag";
         this.avatar = "👨‍💻";
-        this.description = "Backend Developer với đam mê công nghệ và học hỏi. Có kinh nghiệm phát triển các ứng dụng web hiện đại với nhiều công nghệ khác nhau.";
+        this.description = "Sinh viên ngành Kỹ thuật Dữ liệu với chuyên môn sâu về web development và big data analytics. Thành thạo Java ecosystem (Spring Boot, JSP/Servlet), database management (PostgreSQL, MySQL, SQL Server), và big data technologies (Hadoop, Spark, Hive). Có kinh nghiệm thực tế với Docker, Maven, và các công cụ DevOps hiện đại.";
     }
 
     // Getters và Setters

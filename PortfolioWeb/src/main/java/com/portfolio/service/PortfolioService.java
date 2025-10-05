@@ -35,14 +35,34 @@ public class PortfolioService {
     public List<Skill> getSkills() {
         List<Skill> skills = new ArrayList<>();
         
-        skills.add(new Skill("React.js", "Advanced", "⚛️", "JavaScript library for building user interfaces"));
-        skills.add(new Skill("Node.js", "Advanced", "📗", "JavaScript runtime for server-side development"));
-        skills.add(new Skill("Python", "Intermediate", "🐍", "High-level programming language"));
-        skills.add(new Skill("MongoDB", "Intermediate", "🗄️", "NoSQL document database"));
-        skills.add(new Skill("AWS", "Intermediate", "☁️", "Amazon Web Services cloud platform"));
-        skills.add(new Skill("Docker", "Beginner", "🐳", "Containerization platform"));
-        skills.add(new Skill("MySQL", "Intermediate", "💾", "Relational database management system"));
-        skills.add(new Skill("Express.js", "Advanced", "🔥", "Web application framework for Node.js"));
+        // Programming Languages
+        skills.add(new Skill("Java", "Advanced", "☕", "Enterprise programming language for backend development"));
+        skills.add(new Skill("Python", "Intermediate", "🐍", "Data analysis, machine learning and web development"));
+        skills.add(new Skill("R", "Intermediate", "📊", "Statistical computing and data visualization"));
+        skills.add(new Skill("HTML/CSS", "Advanced", "🎨", "Frontend markup and responsive styling"));
+        skills.add(new Skill("JavaScript", "Intermediate", "⚡", "Client-side programming and DOM manipulation"));
+        
+        // Web Technologies & Frameworks
+        skills.add(new Skill("JSP/Servlet", "Advanced", "🌐", "Java web development technologies"));
+        skills.add(new Skill("Spring Boot", "Intermediate", "🍃", "Java framework for rapid application development"));
+        
+        // Databases
+        skills.add(new Skill("PostgreSQL", "Advanced", "🐘", "Advanced relational database management"));
+        skills.add(new Skill("MySQL", "Advanced", "🗃️", "Popular relational database system"));
+        skills.add(new Skill("SQL Server", "Intermediate", "💾", "Microsoft database management system"));
+        
+        // Big Data & Analytics
+        skills.add(new Skill("Apache Hadoop", "Intermediate", "📈", "Distributed storage and processing framework"));
+        skills.add(new Skill("Apache Spark", "Intermediate", "⚡", "Unified analytics engine for big data processing"));
+        skills.add(new Skill("Apache Hive", "Intermediate", "🐝", "Data warehouse software for reading and managing datasets"));
+        skills.add(new Skill("Apache Sqoop", "Intermediate", "🔄", "Tool for transferring data between Hadoop and databases"));
+        skills.add(new Skill("MapReduce", "Intermediate", "🗺️", "Programming model for processing large datasets"));
+        
+        // DevOps & Tools
+        skills.add(new Skill("Docker", "Intermediate", "🐳", "Containerization platform for application deployment"));
+        skills.add(new Skill("Maven", "Intermediate", "📦", "Build automation and dependency management"));
+        skills.add(new Skill("Git/GitHub", "Advanced", "🔧", "Version control and collaborative development"));
+        skills.add(new Skill("Apache Tomcat", "Intermediate", "🚀", "Java application server deployment"));
         
         return skills;
     }
@@ -83,24 +103,24 @@ public class PortfolioService {
         
         certificates.add(new Certificate(
             "Sinh viên Công nghệ Thông tin",
-            "Đại học ABC (2021-2025)",
-            "2021-2025",
-            "Chuyên ngành: Phát triển phần mềm",
+            "Đại học Sư phạm kĩ thuật (2023 - hiện tại)",
+            "2023-2025",
+            "Chuyên ngành: Kĩ thuật Dữ liệu",
             "🎓"
         ));
         
         certificates.add(new Certificate(
-            "Full-Stack Web Development",
-            "Udemy, Coursera (2023)",
-            "2023",
-            "JavaScript, React, Node.js, Database",
+            "Data Engineering with Google Cloud",
+            "Udemy, Coursera (2024)",
+            "2024",
+            "Big Data, ETL, Data Pipelines on GCP",
             "💻"
         ));
         
         certificates.add(new Certificate(
             "Responsive Web Design",
-            "FreeCodeCamp (2022)",
-            "2022",
+            "FreeCodeCamp (2025)",
+            "2025",
             "HTML, CSS, JavaScript fundamentals",
             "🌐"
         ));
