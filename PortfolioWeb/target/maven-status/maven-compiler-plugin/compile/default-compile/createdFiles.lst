@@ -1,0 +1,7 @@
+com\portfolio\model\Skill.class
+com\portfolio\model\User.class
+com\portfolio\service\PortfolioService.class
+com\portfolio\model\Assignment.class
+com\portfolio\model\Certificate.class
+com\portfolio\controller\PortfolioController.class
+com\portfolio\model\Project.class
