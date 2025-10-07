@@ -1,4 +1,6 @@
 murach\business\User.class
 murach\email\EmailListServlet.class
 murach\email\TestServlet.class
+murach\util\SendEmailServlet$1.class
+murach\util\SendEmailServlet.class
 murach\data\UserDB.class

@@ -5,9 +5,11 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import java.util.Calendar;
 import java.util.List;
+import javax.mail.MessagingException;
 
 import murach.business.User;
 import murach.data.UserDB;
+import murach.util.SendEmailServlet;
 
 public class EmailListServlet extends HttpServlet {
 
@@ -36,15 +38,15 @@ public class EmailListServlet extends HttpServlet {
             if (firstName == null || lastName == null || email == null ||
                 firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
                 message = "Please fill out all three text boxes.";
+                request.setAttribute("message", message);
                 url = "/index.jsp";
             } else {
                 message = "";
                 url = "/thanks.jsp";
 
+                // Ghi user vào file
                 ServletContext sc = getServletContext();
                 String path = sc.getRealPath(getServletConfig().getInitParameter("relativePathToFile"));
-
-                // Ghi user vào file
                 UserDB.insert(user, path);
 
                 // Đọc lại danh sách từ file
@@ -53,6 +55,30 @@ public class EmailListServlet extends HttpServlet {
                 // Lưu user và danh sách vào request
                 request.setAttribute("user", user);
                 request.setAttribute("users", users);
+
+                // --- Gửi mail cảm ơn ---
+                String to = email;
+                String from = "phuongdinhhoang18@gmail.com";  // Email gửi (phải hợp lệ)
+                String subject = "Welcome to our email list";
+                String body = "Dear " + firstName + ",\n\n"
+                        + "Thanks for joining our email list. "
+                        + "We'll make sure to send "
+                        + "you announcements about new products "
+                        + "and promotions.\n"
+                        + "Have a great day and thanks again!\n\n"
+                        + "Hoang Phuong's Web";
+                boolean bodyIsHTML = false;
+
+                try {
+                    SendEmailServlet sendEmail = new SendEmailServlet();
+                    sendEmail.sendMail(to, subject, body, bodyIsHTML);
+                } catch (MessagingException e) {
+                    // Log lỗi và thông báo người dùng
+                    e.printStackTrace();
+                    message = "ERROR: Unable to send email. Please check logs.";
+                    request.setAttribute("message", message);
+                    url = "/index.jsp";
+                }
             }
 
             int year = Calendar.getInstance().get(Calendar.YEAR);
