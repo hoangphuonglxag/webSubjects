@@ -12,8 +12,10 @@ import java.util.Properties;
 public class SendEmailServlet extends HttpServlet {
 
     // Thông tin tài khoản Gmail và mật khẩu ứng dụng (App Password)
-    private final String username = "phuongdinhhoang18@gmail.com";
-    private final String appPassword = "cvlfweweoseibksk";  // Thay bằng mật khẩu ứng dụng thật
+    // private final String username = "phuongdinhhoang18@gmail.com";
+    // private final String appPassword = "cvlfweweoseibksk";  // Thay bằng mật khẩu ứng dụng thật
+    private final String username = System.getenv("EMAIL_USERNAME");
+    private final String appPassword = System.getenv("EMAIL_APP_PASSWORD");
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
